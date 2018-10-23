@@ -10,4 +10,5 @@
     <color name="colorTransparent">#00245B</color>
     <color name="coloreGray">#444444</color>
     <color name="colorLightGray">#e9e5e5</color>
+    <color name="colorYellow">#ffff00</color>
 </resources>

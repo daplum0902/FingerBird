@@ -10,7 +10,7 @@
     <!--所有content-->
     <fragment
         android:id="@+id/phome"
-        android:name="com.example.daplu.practice.MainPost"
+        android:name="com.example.daplu.practice.MainPhome"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_fragment"

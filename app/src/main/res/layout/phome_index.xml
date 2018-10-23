@@ -1,61 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainPhome">
+    tools:context=".MainPhome"
+    android:orientation="vertical">
 
-    <!--<fragment-->
-    <!--android:id="@+id/title_fragment"-->
-    <!--android:layout_width="fill_parent"-->
-    <!--android:layout_height="45dp"-->
-    <!--android:name="com.example.daplu.practice.TitleFragment"/>-->
-
-    <ImageView
-        android:id="@+id/cover"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/FrameLayout1"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:alpha="0.8"
-        android:contentDescription="@string/img"
-        android:scaleType="centerCrop"
-        android:src="@drawable/test_cover"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:context=".MainPhome">
+
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:alpha="0.8"
+            android:contentDescription="@string/img"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test_cover"
+            />
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_photo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="8dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/test_cover"
-        app:layout_constraintBottom_toBottomOf="@+id/cover"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cover"
-        app:layout_constraintVertical_bias="0.17000002" />
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            >
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/test_cover" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/name_shape"
+                android:paddingBottom="4dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="4dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="17sp"
+                android:text="@string/phome_name"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/name_shape"
-        android:paddingBottom="4dp"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:paddingTop="4dp"
-        android:textColor="@color/colorWhite"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/cover"
-        app:layout_constraintEnd_toEndOf="@+id/profile_photo"
-        app:layout_constraintStart_toStartOf="@+id/profile_photo"
-        app:layout_constraintTop_toBottomOf="@+id/profile_photo"
-        app:layout_constraintVertical_bias="0.3"
-        android:text="@string/phome_name" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="4dp">
 
         <Button
             android:id="@+id/button"
@@ -66,11 +79,7 @@
             android:layout_marginRight="6dp"
             android:background="@drawable/phome_button_style"
             android:text="Profile"
-            android:textColor="@color/colorWhite"
-            app:layout_constraintEnd_toStartOf="@+id/button2"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cover" />
+            android:textColor="@color/colorWhite" />
 
         <Button
             android:id="@+id/button2"
@@ -80,10 +89,7 @@
             android:layout_marginEnd="6dp"
             android:layout_marginRight="6dp"
             android:background="@drawable/phome_unbutton_style"
-            android:text="Album"
-            app:layout_constraintEnd_toStartOf="@+id/button3"
-            app:layout_constraintStart_toEndOf="@+id/button"
-            app:layout_constraintTop_toBottomOf="@+id/cover" />
+            android:text="Album" />
 
         <Button
             android:id="@+id/button3"
@@ -91,21 +97,30 @@
             android:layout_height="30dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/phome_unbutton_style"
-            android:text="Journal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button2"
-            app:layout_constraintTop_toBottomOf="@+id/cover" />
+            android:text="Journal" />
+
+    </LinearLayout>
 
     <FrameLayout
         android:id="@+id/fl"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"/>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+    <!--<fragment-->
+    <!--android:id="@+id/title_fragment"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="45dp"-->
+    <!--android:name="com.example.daplu.practice.TitleFragment"/>-->
 
 
 
@@ -116,6 +131,3 @@
 
 
 
-
-
-</android.support.constraint.ConstraintLayout>
