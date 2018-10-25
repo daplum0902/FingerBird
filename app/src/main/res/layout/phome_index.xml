@@ -32,7 +32,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_marginTop="0dp"
             >
 
 
@@ -67,14 +66,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginBottom="4dp">
+        android:gravity="center_horizontal">
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="6dp"
             android:layout_marginRight="6dp"
             android:background="@drawable/phome_button_style"
@@ -85,7 +83,7 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="6dp"
             android:layout_marginRight="6dp"
             android:background="@drawable/phome_unbutton_style"
@@ -95,7 +93,7 @@
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/phome_unbutton_style"
             android:text="Journal" />
 
@@ -103,7 +101,7 @@
 
     <FrameLayout
         android:id="@+id/fl"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"/>
 
