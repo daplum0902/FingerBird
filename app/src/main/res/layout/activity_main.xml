@@ -32,14 +32,7 @@
             app:itemIconTint="@color/nav_item_colors"
             app:itemTextColor="@color/nav_item_colors" />
 
-        <!--<fragment-->
 
-            <!--android:id="@+id/bottom_fragment"-->
-            <!--android:name="com.example.daplu.practice.BottomFragment"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:gravity="bottom"-->
-            <!--tools:layout="@layout/bottom_fragment" />-->
 
     </LinearLayout>
 

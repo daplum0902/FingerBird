@@ -14,7 +14,7 @@ import android.view.WindowManager;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String Tag = "BottomFragment";
+
     BottomNavigationViewEx bottomNavigationViewEx;
 
     @Override
@@ -22,14 +22,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.d(Tag,"onCreate:starting.");
+
         bottomNavigationViewEx = (BottomNavigationViewEx)findViewById(R.id.BottomNavViewBar);
         BottomNavigationViewHelper.setupBottomNavigationView(bottomNavigationViewEx);
 
     }
 
     private void setupBottomNavigationView(){
-        Log.d(Tag, "setupBottomNavigationView: setting up BottomNavigationView");
+
         BottomNavigationViewHelper.setupBottomNavigationView(bottomNavigationViewEx);
     }
 }
