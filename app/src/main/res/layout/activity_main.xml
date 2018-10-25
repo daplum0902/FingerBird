@@ -8,19 +8,28 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-    <!--所有content-->
-    <fragment
-        android:id="@+id/content"
-        android:name="com.example.daplu.practice.MainPost"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
     <!--底部選單-->
+    <LinearLayout
+        android:id="@+id/mainview"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--所有content-->
+        <fragment
+            android:id="@+id/content"
+            android:name="com.example.daplu.practice.MainPhome"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:orientation="vertical"
         android:layout_alignParentBottom="true">
 
@@ -35,8 +44,6 @@
 
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>
