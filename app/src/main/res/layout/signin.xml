@@ -13,7 +13,6 @@
         <!--android:layout_width="50dp"-->
         <!--android:layout_height="50dp"-->
         <!--android:background="@drawable/logal_smooth_nw"-->
-        <!--android:contentDescription="@string/todo" />-->
 
     <TextView
         android:id="@+id/textView2"

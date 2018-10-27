@@ -12,17 +12,17 @@
     <LinearLayout
         android:id="@+id/mainview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:layout_weight="1">
+        android:layout_weight="0.9">
 
         <!--所有content-->
         <fragment
             android:id="@+id/content"
             android:name="com.example.daplu.practice.MainPhome"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
@@ -32,7 +32,7 @@
         android:gravity="bottom"
         android:orientation="vertical"
         android:layout_alignParentBottom="true"
-        android:layout_weight="1">
+        android:layout_weight="0.1" >
 
         <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
             android:id="@+id/BottomNavViewBar"

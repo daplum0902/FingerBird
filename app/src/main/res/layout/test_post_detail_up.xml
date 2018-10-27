@@ -143,10 +143,11 @@
 
             <TextView
                 android:id="@+id/introduction"
-                android:layout_width="351dp"
+                android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
                 android:background="@color/colorLightGray"
                 android:paddingLeft="20dp"
                 android:paddingTop="15dp"
@@ -220,6 +221,15 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <fragment
+        android:id="@+id/bottom_content"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginBottom="8dp"
+        android:name="com.example.daplu.practice.testPostDetailBottomFragment"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
 
 
 
