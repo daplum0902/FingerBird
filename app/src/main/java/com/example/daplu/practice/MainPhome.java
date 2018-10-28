@@ -74,6 +74,7 @@ public class MainPhome extends Fragment{
 //        fm = getSupportFragmentManager();
         Log.d("測試","111");
 
+        setTabSelection(0);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

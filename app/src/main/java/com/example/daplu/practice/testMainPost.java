@@ -6,10 +6,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
 public class testMainPost extends Fragment {
 
@@ -31,6 +34,7 @@ public class testMainPost extends Fragment {
 
     }
 
+
     public static testMainPost newInstance(String param1, String param2) {
         testMainPost fragment = new testMainPost();
         Bundle args = new Bundle();
@@ -40,19 +44,42 @@ public class testMainPost extends Fragment {
         return fragment;
     }
 
-//    private Button btn;
-//    private Button btn2;
-//    private Button btn3;
-//    private PhomeProfileList phomeProfileList;
-//    private PhomeAlbumFragment phomeAlbumFragment;
-//    private PhomeJournalFragment phomeJournalFragment;
-//    FragmentManager fm;
+    private Button btn_post;
+    private Button btn_journal;
+    private testPostFragment testPostFragment;
+    private testJournalFragment testJournalFragment;
+    FragmentManager fm;
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.test_post_index, container, false);
+
+        btn_journal = view.findViewById(R.id.btn_journal);
+        btn_post = view.findViewById(R.id.btn_post);
+        fm = getFragmentManager();
+
+        Log.d("hi","working");
+
+        setTabSelection(0);
+
+        btn_post.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("我","要徵伴");
+                setTabSelection(0);
+            }
+        });
+        btn_journal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("我","要發遊記");
+                setTabSelection(1);
+            }
+        });
+
+
 
         return view;
     }
@@ -95,5 +122,37 @@ public class testMainPost extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
+    private void setTabSelection(int index){
+
+        FragmentTransaction ft = fm.beginTransaction();
+        hideFragment(ft);
+        switch (index) {
+            case 1:
+                if(testPostFragment==null){
+                    testPostFragment = new testPostFragment();
+                    ft.add(R.id.post_mainview, testPostFragment);
+                }else{
+                    ft.show(testPostFragment);
+                }
+                break;
+
+            case 0:
+                if(testJournalFragment==null){
+                    testJournalFragment = new testJournalFragment();
+                    ft.add(R.id.post_mainview, testJournalFragment);
+                }
+                ft.show(testJournalFragment);
+                break;
+        }
+        ft.commit();
+    }
+    //用于隐藏fragment
+    private void hideFragment(FragmentTransaction ft) {
+        if (testJournalFragment != null) {
+            ft.hide(testJournalFragment);
+        }else if (testPostFragment != null) {
+            ft.hide(testPostFragment);
+        }
+    }
 
 }
