@@ -19,10 +19,11 @@ import android.view.WindowManager;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 public class MainActivity extends AppCompatActivity
-implements MainPhome.OnFragmentInteractionListener,ChatRoomIndex.OnFragmentInteractionListener
+implements MainPhome.OnFragmentInteractionListener,testMainPost.OnFragmentInteractionListener,ChatRoomIndex.OnFragmentInteractionListener
 {
     private BottomNavigationViewEx bottomNavigationViewEx;
     private MainPhome mainPhome;
+    private testMainPost testMainPost;
     private ChatRoomIndex chatRoomIndex;
     private Fragment[] fragments;
     private int lastfragment;
@@ -37,8 +38,9 @@ implements MainPhome.OnFragmentInteractionListener,ChatRoomIndex.OnFragmentInter
 
     private void initFragment() {
         mainPhome = new MainPhome();
+        testMainPost = new testMainPost();
         chatRoomIndex = new ChatRoomIndex();
-        fragments = new Fragment[]{mainPhome,mainPhome,mainPhome,chatRoomIndex,chatRoomIndex};
+        fragments = new Fragment[]{mainPhome,testMainPost,mainPhome,chatRoomIndex,chatRoomIndex};
         lastfragment = 0;
         getSupportFragmentManager().beginTransaction().replace(R.id.mainview,mainPhome).show(mainPhome).commit();
 
@@ -108,7 +110,7 @@ implements MainPhome.OnFragmentInteractionListener,ChatRoomIndex.OnFragmentInter
                     if(lastfragment!=4)
                     {
                         switchFragment(lastfragment,4);
-                        lastfragment=2;
+                        lastfragment=4;
 
                     }
 
