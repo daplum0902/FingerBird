@@ -109,15 +109,15 @@
 
 
 
-    <!--<ImageButton-->
-        <!--android:id="@+id/btn_google"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:background="#08FFFFFF"-->
-        <!--android:contentDescription="@string/send2"-->
-        <!--android:scaleType="fitCenter"-->
-        <!--android:src="@drawable/google"-->
-        <!--android:layout_marginTop="16dp" />-->
+    <ImageButton
+        android:id="@+id/btn_google"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="#08FFFFFF"
+        android:contentDescription="@string/send2"
+        android:scaleType="fitCenter"
+        android:src="@drawable/google"
+        android:layout_marginTop="16dp" />
 
 
 </LinearLayout>
