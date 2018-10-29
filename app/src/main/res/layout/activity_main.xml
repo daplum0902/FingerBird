@@ -16,14 +16,6 @@
         android:gravity="center"
         android:orientation="vertical"
         android:layout_weight="0.9">
-
-        <!--所有content-->
-        <fragment
-            android:id="@+id/content"
-            android:name="com.example.daplu.practice.MainPhome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
     </LinearLayout>
 
     <LinearLayout
