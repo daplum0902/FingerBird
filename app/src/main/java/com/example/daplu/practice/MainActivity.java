@@ -21,6 +21,7 @@ import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 public class MainActivity extends AppCompatActivity
 implements MainPhome.OnFragmentInteractionListener,testMainPost.OnFragmentInteractionListener,ChatRoomIndex.OnFragmentInteractionListener
     ,ScheduleIndexList.OnFragmentInteractionListener
+
 {
     private BottomNavigationViewEx bottomNavigationViewEx;
     private MainPhome mainPhome;

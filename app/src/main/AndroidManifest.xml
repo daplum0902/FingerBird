@@ -25,6 +25,7 @@
         <activity android:name=".testJournalDetail"></activity>
         <activity android:name=".PostDetail"></activity>
 
+
     </application>
 
 </manifest>
