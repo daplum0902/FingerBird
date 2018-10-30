@@ -9,69 +9,85 @@
     android:layout_gravity="center">
 
 
-
-    <ImageView
-        android:id="@+id/search_bar"
+    <RelativeLayout
+        android:id="@+id/top"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="8dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/search_bar"
-        android:contentDescription="@string/searchbar" />
+        android:layout_height="wrap_content">
 
-    <!--<LinearLayout-->
-        <!--android:id="@+id/btn_layout"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_below="@+id/title_fragment"-->
-        <!--android:layout_centerHorizontal="true">-->
+        <ImageView
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/search_bar"
+            android:contentDescription="@string/searchbar" />
 
-        <!--<Button-->
-            <!--android:id="@+id/btn_post"-->
-            <!--android:layout_width="110dp"-->
-            <!--android:layout_height="35dp"-->
-            <!--android:layout_marginTop="8dp"-->
-            <!--android:background="@drawable/post_unbutton_style"-->
-            <!--android:text="徵伴"-->
-            <!--android:textColor="@color/coloreGray"-->
-            <!--android:textSize="17sp" />-->
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_bar"
+            android:layout_centerHorizontal="true">
 
-        <!--<Button-->
-            <!--android:id="@+id/btn_journal"-->
-            <!--android:layout_width="110dp"-->
-            <!--android:layout_height="35dp"-->
-            <!--android:layout_marginStart="8dp"-->
-            <!--android:layout_marginLeft="8dp"-->
-            <!--android:layout_marginTop="8dp"-->
-            <!--android:layout_marginBottom="8dp"-->
-            <!--android:background="@drawable/post_button_style"-->
-            <!--android:text="遊記"-->
-            <!--android:textColor="@color/colorWhite"-->
-            <!--android:textSize="17sp" />-->
-    <!--</LinearLayout>-->
+            <Button
+                android:id="@+id/btn_post"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/post_unbutton_style"
+                android:text="徵伴"
+                android:textColor="@color/coloreGray"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/btn_journal"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/post_button_style"
+                android:text="遊記"
+                android:textColor="@color/colorWhite"
+                android:textSize="17sp" />
+        </LinearLayout>
 
 
 
-    <!--<fragment-->
-        <!--android:id="@+id/post"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="fill_parent"-->
-        <!--android:layout_below="@id/title_fragment"-->
-        <!--android:name="com.example.daplu.practice.testPostFragment"-->
-        <!--android:layout_marginRight="3dp"-->
-        <!--android:layout_marginLeft="3dp"/>-->
+    </RelativeLayout>
 
-    <fragment
-        android:id="@+id/journal"
+    <LinearLayout
+        android:id="@+id/post_mainview"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/search_bar"
-        android:name="com.example.daplu.practice.testJournalFragment"
-        android:layout_marginRight="3dp"
-        android:layout_marginLeft="3dp" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="97dp"
+        android:orientation="vertical">
 
+        <!--<fragment-->
+            <!--android:id="@+id/journal"-->
+            <!--android:name="com.example.daplu.practice.testJournalFragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_below="@id/top"-->
+            <!--android:layout_marginLeft="3dp"-->
+            <!--android:layout_marginRight="3dp" />-->
+
+
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/fl"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_gravity="top" />-->
+
+    </LinearLayout>
 
 
 </RelativeLayout>
