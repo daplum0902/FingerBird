@@ -6,14 +6,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <fragment
-        android:id="@+id/title_fragment"
-        android:name="com.example.daplu.practice.TitleFragment"
-        android:layout_width="fill_parent"
-        android:layout_height="45dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout
+        android:id="@+id/chatroom_index_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:background="@drawable/ic_navigate_before_black_24dp" />
+
+
+        <TextView
+            android:id="@+id/post_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:text="聊天室"
+            android:textColor="@color/gray"
+            android:textSize="18sp" />
+
+    </FrameLayout>
 
 
     <!--<ScrollView-->
@@ -41,7 +58,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/chatroom_index_title"
                 app:layout_constraintVertical_bias="0.0" />
         <!--</LinearLayout>-->
     <!--</ScrollView>-->

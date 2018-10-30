@@ -1,10 +1,15 @@
 package com.example.daplu.practice;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -22,6 +27,7 @@ public class testPostFragment extends Fragment {
 
     private ListView listView;
     private ListAdapter listAdapter;
+
 
     public String[][] data = {
             {"我想去看瀑布", "美國 / 尼加拉瓜", "12/10"},
@@ -54,10 +60,23 @@ public class testPostFragment extends Fragment {
                 R.layout.test_post_list_style,
                 new String[]{"title", "place", "date"},
                 new int[]{R.id.title, R.id.place, R.id.date}
+
+
         );
 
         ListView listView = (ListView) view.findViewById(R.id.post2_list);
         listView.setAdapter(adapter);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(), PostDetail.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
+
+
 }
