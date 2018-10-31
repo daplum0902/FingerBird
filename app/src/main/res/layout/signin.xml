@@ -5,14 +5,13 @@
     android:layout_height="match_parent"
     android:background="@drawable/login_bk"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:layout_centerVertical="true">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|left"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_weight="1">
 
         <ImageView
@@ -26,7 +25,7 @@
         <!--android:id="@+id/logo_"-->
         <!--android:layout_width="50dp"-->
         <!--android:layout_height="50dp"-->
-        <!--android:background="@drawable/logal_smooth_nw"-->
+        <!--android:background="@drawable/logal_smooth_nw" />-->
 
     <TextView
         android:id="@+id/textView2"
@@ -57,6 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:ems="10"
+        android:textColor="@color/colorLightGray"
         android:inputType="textEmailAddress"
         android:hint="@string/login_e" />
 

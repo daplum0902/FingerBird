@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="bottom"
-    android:orientation="horizontal" >
+    android:orientation="horizontal"
+    android:paddingTop="24dp"
+    android:paddingBottom="8dp">
 
     <EditText
         android:layout_width="match_parent"
@@ -16,7 +18,8 @@
         android:paddingTop="8dp"
         android:paddingRight="15dp"
         android:paddingBottom="8dp"
-        android:text="123"
+        android:text="來發問"
+        android:textColor="@color/white"
         android:textSize="16sp" />
 
     <Button
