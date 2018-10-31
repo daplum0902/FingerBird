@@ -5,27 +5,21 @@
     android:layout_height="match_parent"
     android:background="@drawable/login_bk"
     android:orientation="vertical"
-    android:gravity="center"
-    android:layout_centerVertical="true">
+    android:gravity="center_horizontal">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|left"
-        android:layout_weight="1">
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/ic_keyboard_arrow_left_white" />
-    </LinearLayout>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_keyboard_arrow_left_white"
+        android:layout_gravity="left"/>
 
 
     <!--<ImageView-->
-        <!--android:id="@+id/logo_"-->
-        <!--android:layout_width="50dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:background="@drawable/logal_smooth_nw" />-->
+    <!--android:id="@+id/logo_"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:background="@drawable/logal_smooth_nw"-->
 
     <TextView
         android:id="@+id/textView2"
@@ -56,7 +50,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:ems="10"
-        android:textColor="@color/colorLightGray"
         android:inputType="textEmailAddress"
         android:hint="@string/login_e" />
 
@@ -73,15 +66,15 @@
         android:hint="@string/login_pwd" />
 
     <ImageButton
-    android:id="@+id/btn_signup"
-    android:layout_width="74dp"
-    android:layout_height="74dp"
-    android:layout_marginTop="24dp"
-    android:background="#08FFFFFF"
-    android:scaleType="fitCenter"
-    android:contentDescription="@string/send"
-    android:src="@drawable/enter"
-    android:onClick="Onsignin"/>
+        android:id="@+id/btn_signup"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="24dp"
+        android:background="#08FFFFFF"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/send"
+        android:src="@drawable/enter"
+        android:onClick="Onsignin"/>
 
 
     <LinearLayout

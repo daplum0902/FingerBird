@@ -36,6 +36,11 @@ public class testJournalMsgList extends Fragment {
 
 
         View view = View.inflate(getActivity(), R.layout.test_journal_message, null);
+        ListView listView = (ListView) view.findViewById(R.id.message_list);
+
+        View footer_view = getLayoutInflater().inflate(R.layout.test_journal_msg_footerview, null);
+        listView.addFooterView(footer_view);
+
 
         //將資料轉換成<key,value>的型態
         List<Map<String, Object>> items = new ArrayList<Map<String,Object>>();
@@ -55,7 +60,7 @@ public class testJournalMsgList extends Fragment {
                 new int[]{R.id.ms_name, R.id.ms_content}
         );
 
-        ListView listView = (ListView) view.findViewById(R.id.message_list);
+
         listView.setAdapter(adapter);
         return view;
 
