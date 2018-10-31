@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
-    android:orientation="horizontal">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <FrameLayout
+        android:id="@+id/notify_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
-        <ImageButton
-            android:onClick="BackJournal"
+        <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="left"
@@ -28,13 +25,19 @@
             android:layout_weight="0.7"
             android:gravity="center"
             android:paddingBottom="8dp"
-            android:text="原住民的日常"
+            android:text="通知"
             android:textColor="@color/gray"
             android:textSize="18sp" />
 
     </FrameLayout>
 
-    
+    <ListView
+        android:id="@+id/notify_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notify_title"/>
 
 
-</LinearLayout>
+
+
+</RelativeLayout>

@@ -27,37 +27,37 @@
             android:divider="@color/transparent"/>
 
 
-    <LinearLayout
+    <!--<LinearLayout-->
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:orientation="horizontal" >
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:orientation="horizontal" >-->
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/message_style"
-            android:paddingLeft="15dp"
-            android:paddingTop="8dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="8dp"
-            android:text="123"
-            android:textSize="16sp" />
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="8dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/message_style"-->
+            <!--android:paddingLeft="15dp"-->
+            <!--android:paddingTop="8dp"-->
+            <!--android:paddingRight="15dp"-->
+            <!--android:paddingBottom="8dp"-->
+            <!--android:text="123"-->
+            <!--android:textSize="16sp" />-->
 
-        <Button
-            android:layout_width="130dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/post_message_send_btn"
-            android:text="送出"
-            android:textColor="@color/white" />
+        <!--<Button-->
+            <!--android:layout_width="130dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/post_message_send_btn"-->
+            <!--android:text="送出"-->
+            <!--android:textColor="@color/white" />-->
 
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
 
 
