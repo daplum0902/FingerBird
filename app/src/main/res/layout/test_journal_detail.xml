@@ -61,7 +61,7 @@
             android:layout_toRightOf="@+id/profile"
             android:layout_marginLeft="16dp"
             android:text="毛毛"
-            android:textSize="16sp"
+            android:textSize="17sp"
             android:layout_marginStart="16dp" />
 
         <TextView
@@ -166,12 +166,25 @@
         </LinearLayout>
     </ScrollView>
 
+    <TextView
+        android:id="@+id/schedule_title"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/post_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/post_schedule_style"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="行程表1"
+        android:textColor="@color/colorPrimaryDark" />
+
 <fragment
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:name="com.example.daplu.practice.testJournalMsgList"
     android:id="@+id/msg_fragment"
-    android:layout_below="@+id/post_content"
+    android:layout_below="@+id/schedule_title"
     android:layout_alignParentBottom="true"/>
 
 

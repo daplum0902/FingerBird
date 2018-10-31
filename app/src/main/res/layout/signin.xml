@@ -16,11 +16,12 @@
             android:onClick="Backsignup"/>
 
 
+
     <!--<ImageView-->
-        <!--android:id="@+id/logo_"-->
-        <!--android:layout_width="50dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:background="@drawable/logal_smooth_nw"-->
+    <!--android:id="@+id/logo_"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:background="@drawable/logal_smooth_nw"-->
 
     <TextView
         android:id="@+id/textView2"
@@ -67,15 +68,15 @@
         android:hint="@string/login_pwd" />
 
     <ImageButton
-    android:id="@+id/btn_signup"
-    android:layout_width="74dp"
-    android:layout_height="74dp"
-    android:layout_marginTop="24dp"
-    android:background="#08FFFFFF"
-    android:scaleType="fitCenter"
-    android:contentDescription="@string/send"
-    android:src="@drawable/enter"
-    android:onClick="Onsignin"/>
+        android:id="@+id/btn_signup"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="24dp"
+        android:background="#08FFFFFF"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/send"
+        android:src="@drawable/enter"
+        android:onClick="Onsignin"/>
 
 
     <LinearLayout
