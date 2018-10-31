@@ -24,6 +24,7 @@
         <activity android:name=".MainPost"></activity>
         <activity android:name=".testJournalDetail"></activity>
         <activity android:name=".PostDetail"></activity>
+        <activity android:name=".schedulelist"></activity>
 
 
     </application>

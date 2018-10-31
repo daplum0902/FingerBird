@@ -5,9 +5,9 @@ android {
     signingConfigs {
         config {
             keyAlias 'androiddebugkey'
-            keyPassword 'cc1124'
-            storeFile file('C:/Users/daplu/.android/debug.keystore')
-            storePassword 'cc1124'
+            keyPassword 'android'
+            storeFile file('C:/Program Files/Java/jre1.8.0_191/bin/debug.keystore')
+            storePassword 'android'
         }
     }
     compileSdkVersion 26

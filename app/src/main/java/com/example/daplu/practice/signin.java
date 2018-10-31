@@ -31,7 +31,7 @@ public class signin extends Activity {
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         mGoogleSignInClient= GoogleSignIn.getClient(this,gso);
     }
-    public void OnLogin(View view) {
+    public void Onsignin(View view) {
         String username = login_email.getText().toString();
         String password = login_pwd.getText().toString();
         String type = "login";
@@ -71,5 +71,7 @@ public class signin extends Activity {
             Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
         }
     }
-
+    public void Onsignup(View view) {
+        startActivity(new Intent(signin.this,signup.class));
+    }
 }
