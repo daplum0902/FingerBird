@@ -16,12 +16,8 @@
     <!--android:id="@+id/logo_"-->
     <!--android:layout_width="50dp"-->
     <!--android:layout_height="50dp"-->
-    <!--app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--app:layout_constraintEnd_toEndOf="parent"-->
-    <!--app:layout_constraintStart_toStartOf="parent"-->
-    <!--app:layout_constraintTop_toTopOf="parent"-->
-    <!--app:layout_constraintVertical_bias="0.069"-->
-    <!--android:background="@drawable/logal_smooth_nw"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:background="@drawable/logal_smooth_nw" />-->
 
     <TextView
         android:id="@+id/textView2"
@@ -37,11 +33,9 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="@string/signup"
         android:textSize="26sp"
-        android:textColor="@color/colorWhite"
-        android:padding="10dp" />
+        android:textColor="@color/colorWhite" />
 
     <EditText
         android:id="@+id/name"
@@ -130,7 +124,7 @@
 
             <Button
                 android:id="@+id/btn_signin"
-                android:layout_width="70dp"
+                android:layout_width="72dp"
                 android:layout_height="30dp"
                 android:layout_margin="0dp"
                 android:background="@drawable/btn_signin_style"
@@ -144,7 +138,7 @@
                 android:layout_width="48dp"
                 android:layout_height="2dp"
                 android:background="@color/colorLightWhite"
-                android:layout_marginLeft="9dp"/>
+                android:layout_marginLeft="12dp"/>
 
         </LinearLayout>
 

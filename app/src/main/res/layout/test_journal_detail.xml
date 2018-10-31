@@ -150,7 +150,8 @@
     android:layout_height="wrap_content"
     android:name="com.example.daplu.practice.testJournalMsgList"
     android:id="@+id/msg_fragment"
-    android:layout_below="@+id/post_content"/>
+    android:layout_below="@+id/post_content"
+    android:layout_alignParentBottom="true"/>
 
 
 </RelativeLayout>
