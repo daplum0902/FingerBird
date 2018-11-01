@@ -62,20 +62,20 @@ public class testMainPost extends Fragment {
 
         Log.d("hi","working");
 
-        setTabSelection(0);
+        setTabSelection(1);
 
         btn_post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("我","要徵伴");
-                setTabSelection(0);
+                setTabSelection(1);
             }
         });
         btn_journal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("我","要發遊記");
-                setTabSelection(1);
+                setTabSelection(0);
             }
         });
 
@@ -127,21 +127,27 @@ public class testMainPost extends Fragment {
         FragmentTransaction ft = fm.beginTransaction();
         hideFragment(ft);
         switch (index) {
-            case 1:
+            case 0:
                 if(testPostFragment==null){
                     testPostFragment = new testPostFragment();
                     ft.add(R.id.post_mainview, testPostFragment);
+
+                    Log.d("now",ft.toString());
                 }else{
                     ft.show(testPostFragment);
+                    Log.d("now",ft.toString());
                 }
                 break;
 
-            case 0:
+            case 1:
                 if(testJournalFragment==null){
                     testJournalFragment = new testJournalFragment();
                     ft.add(R.id.post_mainview, testJournalFragment);
+                    Log.d("now",ft.toString());
+                }else {
+                    ft.show(testJournalFragment);
+                    Log.d("now", ft.toString());
                 }
-                ft.show(testJournalFragment);
                 break;
         }
         ft.commit();

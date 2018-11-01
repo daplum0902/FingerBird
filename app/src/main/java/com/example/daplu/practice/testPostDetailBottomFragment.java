@@ -1,5 +1,6 @@
 package com.example.daplu.practice;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,7 +19,6 @@ import java.util.Map;
 public class testPostDetailBottomFragment extends Fragment {
     private Button btn;
     private View view;
-
     private ListView listView;
     private ListAdapter listAdapter;
 

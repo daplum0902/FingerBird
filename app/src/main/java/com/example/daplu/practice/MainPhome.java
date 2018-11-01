@@ -1,6 +1,7 @@
 package com.example.daplu.practice;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -14,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 
 public class MainPhome extends Fragment{
@@ -47,6 +49,8 @@ public class MainPhome extends Fragment{
     private Button btn;
     private Button btn2;
     private Button btn3;
+    private TextView name;
+    private SharedPreferences prf;
     private PhomeProfileList phomeProfileList;
     private PhomeAlbumFragment phomeAlbumFragment;
     private PhomeJournalFragment phomeJournalFragment;
@@ -60,6 +64,9 @@ public class MainPhome extends Fragment{
 //            super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.phome_index, container, false);
 
+        name = view.findViewById(R.id.name);
+        prf = getActivity().getSharedPreferences("user_details",Context.MODE_PRIVATE);
+
 //        setContentView(R.layout.phome_index);
 
         btn = (Button) view.findViewById(R.id.button);
@@ -67,8 +74,11 @@ public class MainPhome extends Fragment{
         btn3 = (Button) view.findViewById(R.id.button3);
         FrameLayout fl = view.findViewById(R.id.fl);
 
-
-
+        if(prf.getString("name",null)!=null) {
+            name.setText(prf.getString("name", null));
+        }else{
+            name.setText(prf.getString("email", null));
+        }
 
         fm = getFragmentManager();
 //        fm = getSupportFragmentManager();

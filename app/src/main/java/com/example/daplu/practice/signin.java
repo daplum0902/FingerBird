@@ -2,6 +2,7 @@ package com.example.daplu.practice;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -20,6 +21,7 @@ import static android.support.constraint.Constraints.TAG;
 public class signin extends Activity {
     EditText login_email, login_pwd;
     private GoogleSignInClient mGoogleSignInClient;
+    private SharedPreferences pref;
     private static final int RC_SIGN_IN = 9001;
 
     @Override
@@ -28,6 +30,7 @@ public class signin extends Activity {
         setContentView(R.layout.signin);
         login_email = findViewById(R.id.login_email);
         login_pwd = findViewById(R.id.login_pwd);
+        pref = getSharedPreferences("user_details",MODE_PRIVATE);
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         mGoogleSignInClient= GoogleSignIn.getClient(this,gso);
     }
@@ -60,6 +63,10 @@ public class signin extends Activity {
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putString("name",account.getDisplayName());
+            editor.putString("email",account.getEmail());
+            editor.commit();
             startActivity(new Intent(signin.this, MainActivity.class));
 
             // Signed in successfully, show authenticated UI.
