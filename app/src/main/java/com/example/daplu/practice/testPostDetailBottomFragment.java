@@ -1,6 +1,5 @@
 package com.example.daplu.practice;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -29,6 +28,11 @@ public class testPostDetailBottomFragment extends Fragment {
             {"阿加", "你喜歡羊駝嗎"}
     };
 
+    int[] journal_img = new int[]{
+            R.drawable.demo_user_g, R.drawable.demo_user_b,
+            R.drawable.demo_user_b, R.drawable.demo_user_g, R.drawable.demo_user_g
+    };
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,6 +41,7 @@ public class testPostDetailBottomFragment extends Fragment {
 
         View view = View.inflate(getActivity(), R.layout.test_post_detail_down, null);
         ListView listView = (ListView) view.findViewById(R.id.message_list);
+
         View footer_view = getLayoutInflater().inflate(R.layout.post_detail_footer_view, null);
 
         listView.addFooterView(footer_view);
@@ -48,18 +53,17 @@ public class testPostDetailBottomFragment extends Fragment {
             Map<String, Object> item = new HashMap<String, Object>();
             item.put("ms_name", data[i][0]);
             item.put("ms_content", data[i][1]);
+            item.put("profile", Integer.toString(journal_img[i]));
             items.add(item);
         }
 
-        //帶入對應資料
-        SimpleAdapter adapter = new SimpleAdapter(
-                getActivity(),
-                items,
-                R.layout.message_list_layout,
-                new String[]{"ms_name", "ms_content"},
-                new int[]{R.id.ms_name, R.id.ms_content}
-        );
+        // Keys used in Hashmap
+        String[] from = {"ms_name", "ms_content", "profile" };
 
+        // Ids of views in listview_layout
+        int[] to = { R.id.ms_name, R.id.ms_content, R.id.profile};
+
+        SimpleAdapter adapter = new SimpleAdapter(getActivity(), items, R.layout.message_list_layout, from, to);
 
         listView.setAdapter(adapter);
         return view;

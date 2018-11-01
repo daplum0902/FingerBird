@@ -91,6 +91,13 @@ public class MainPhome extends Fragment{
             public void onClick(View v) {
                 Log.d("編號0","被點了");
                 setTabSelection(0);
+                btn.setBackground(getResources().getDrawable(R.drawable.phome_button_style));
+                btn2.setBackground(getResources().getDrawable(R.drawable.phome_unbutton_style));
+                btn3.setBackground(getResources().getDrawable(R.drawable.phome_unbutton_style));
+
+                btn.setTextColor(getResources().getColor(R.color.white));
+                btn2.setTextColor(getResources().getColor(R.color.gray));
+                btn3.setTextColor(getResources().getColor(R.color.gray));
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +105,13 @@ public class MainPhome extends Fragment{
             public void onClick(View v) {
                 Log.d("編號1","被點了");
                 setTabSelection(1);
+                btn2.setBackground(getResources().getDrawable(R.drawable.phome_button_style));
+                btn.setBackground(getResources().getDrawable(R.drawable.phome_unbutton_style));
+                btn3.setBackground(getResources().getDrawable(R.drawable.phome_unbutton_style));
+
+                btn2.setTextColor(getResources().getColor(R.color.white));
+                btn.setTextColor(getResources().getColor(R.color.gray));
+                btn3.setTextColor(getResources().getColor(R.color.gray));
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +119,13 @@ public class MainPhome extends Fragment{
             public void onClick(View v) {
                 Log.d("編號2","被點了");
                 setTabSelection(2);
+                btn3.setBackground(getResources().getDrawable(R.drawable.phome_button_style));
+                btn2.setBackground(getResources().getDrawable(R.drawable.phome_unbutton_style));
+                btn.setBackground(getResources().getDrawable(R.drawable.phome_unbutton_style));
+
+                btn3.setTextColor(getResources().getColor(R.color.white));
+                btn2.setTextColor(getResources().getColor(R.color.gray));
+                btn.setTextColor(getResources().getColor(R.color.gray));
             }
         });
 

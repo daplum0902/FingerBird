@@ -2,6 +2,7 @@ package com.example.daplu.practice;
 
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -51,6 +52,7 @@ public class testMainPost extends Fragment {
     FragmentManager fm;
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +61,7 @@ public class testMainPost extends Fragment {
         btn_journal = view.findViewById(R.id.btn_journal);
         btn_post = view.findViewById(R.id.btn_post);
         fm = getFragmentManager();
+
 
         Log.d("hi","working");
 
@@ -69,6 +72,11 @@ public class testMainPost extends Fragment {
             public void onClick(View v) {
                 Log.d("我","要徵伴");
                 setTabSelection(1);
+                btn_journal.setBackground(getResources().getDrawable(R.drawable.post_unbutton_style));
+                btn_post.setBackground(getResources().getDrawable(R.drawable.post_button_style));
+
+                btn_journal.setTextColor(getResources().getColor(R.color.gray));
+                btn_post.setTextColor(getResources().getColor(R.color.white));
             }
         });
         btn_journal.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +84,12 @@ public class testMainPost extends Fragment {
             public void onClick(View v) {
                 Log.d("我","要發遊記");
                 setTabSelection(0);
+                btn_journal.setBackground(getResources().getDrawable(R.drawable.post_button_style));
+                btn_post.setBackground(getResources().getDrawable(R.drawable.post_unbutton_style));
+
+                btn_journal.setTextColor(getResources().getColor(R.color.white));
+                btn_post.setTextColor(getResources().getColor(R.color.gray));
+
             }
         });
 

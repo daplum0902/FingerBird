@@ -46,6 +46,8 @@ public class testJournalFragment extends Fragment {
         View view = View.inflate(getActivity(), R.layout.test_journal_fragment, null);
         ListView listView = (ListView) view.findViewById(R.id.post_j_list);
 
+
+
         //將資料轉換成<key,value>的型態
         List<Map<String, Object>> items = new ArrayList<Map<String,Object>>();
         for (int i=0;i < data.length;i++){

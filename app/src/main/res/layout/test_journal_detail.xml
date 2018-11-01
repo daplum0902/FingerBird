@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="fill_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
 
@@ -37,155 +37,14 @@
     </FrameLayout>
 
 
-    <RelativeLayout
-        android:id="@+id/top_list"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_below="@+id/journal_detail_title">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="16dp"
-            android:src="@drawable/test_cover"
-            android:layout_marginStart="16dp" />
-
-        <TextView
-            android:id="@+id/poster_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/profile"
-            android:layout_toRightOf="@+id/profile"
-            android:layout_marginLeft="16dp"
-            android:text="毛毛"
-            android:textSize="17sp"
-            android:layout_marginStart="16dp" />
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2018/10/3"
-            android:textColor="@color/gray"
-            android:textSize="14sp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="8dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="8dp" />
 
 
-    </RelativeLayout>
-
-
-    <FrameLayout
-        android:id="@+id/mid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/top_list">
-
-        <ImageView
-            android:id="@+id/post_cover"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/test_cover" />
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="@drawable/heart"
-            android:layout_gravity="right"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp" />
-
-    </FrameLayout>
-
-    <RelativeLayout
-        android:id="@+id/place"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/mid"
-        android:layout_marginTop="16dp">
-
-        <ImageView
-            android:id="@+id/loc_icon"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:background="@drawable/location_point"
-            android:scaleType="centerCrop" />
-
-
-        <TextView
-            android:id="@+id/journal_place"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="台灣 / 屏東"
-            android:textColor="@color/gray"
-            android:textSize="14sp"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/loc_icon"
-            android:layout_marginLeft="8dp"
-            android:layout_toEndOf="@+id/loc_icon"
-            android:layout_marginStart="8dp" />
-
-
-
-
-
-
-    </RelativeLayout>
-
-    <ScrollView
-        android:id="@+id/post_content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/place">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/test_txt" />
-
-
-        </LinearLayout>
-    </ScrollView>
-
-    <Button
-        android:id="@+id/Toschedule1"
-        android:layout_width="100dp"
-        android:layout_height="32dp"
-        android:layout_below="@+id/post_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/post_schedule_style"
-        android:gravity="center"
-        android:padding="5dp"
-        android:text="行程表1"
-        android:textColor="@color/colorPrimaryDark" />
-
-<fragment
+    <fragment
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="fill_parent"
     android:name="com.example.daplu.practice.testJournalMsgList"
     android:id="@+id/msg_fragment"
-    android:layout_below="@+id/Toschedule1"
-    android:layout_alignParentBottom="true"/>
+    android:layout_below="@+id/journal_detail_title" />
 
 
 </RelativeLayout>
