@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -18,7 +19,7 @@ import java.util.Map;
 public class ScheduleListFragment extends Fragment {
     private Button btn;
     private View view;
-
+    private ImageButton Backschedule;
 
     private ListView listView;
 
@@ -73,12 +74,27 @@ public class ScheduleListFragment extends Fragment {
         listView.setAdapter(adapter);
 
 
+        Backschedule = view.findViewById(R.id.Backschedule);
+        Backschedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),MainActivity.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+
         return view;
     }
 
-
     public void Backschedule(View view){
-        startActivity(new Intent(getActivity(),MainActivity.class));
+        Intent intent = new Intent(getActivity(),MainActivity.class);
+        startActivity(intent);
+
+
     }
+
 
 }

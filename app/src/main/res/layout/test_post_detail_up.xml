@@ -58,8 +58,8 @@
                 android:layout_marginLeft="18dp"
                 android:gravity="center_vertical"
                 android:text="印度阿三"
-                android:textSize="18sp"
                 android:textColor="@color/gray"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -80,24 +80,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:orientation="vertical"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/plaz_title"
                     android:layout_width="43dp"
                     android:layout_height="23dp"
                     android:text="地點"
+                    android:textColor="@color/gray"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/gray"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/plaz_info"
@@ -113,17 +113,17 @@
                 android:id="@+id/budget_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/budget"
                     android:layout_width="43dp"
                     android:layout_height="23dp"
                     android:text="預算"
+                    android:textColor="@color/gray"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/gray"/>
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="23dp"
@@ -138,8 +138,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1500"
-                    android:textSize="17sp"
-                    />
+                    android:textSize="17sp" />
 
 
             </LinearLayout>
@@ -150,8 +149,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
                 android:background="@color/colorLightGray"
                 android:paddingLeft="20dp"
                 android:paddingTop="15dp"
@@ -172,8 +171,8 @@
                 android:layout_height="23dp"
                 android:layout_marginBottom="8dp"
                 android:text="旅遊類型"
-                android:textSize="18sp"
                 android:textColor="@color/gray"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -190,8 +189,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/type2_title"
@@ -199,9 +198,9 @@
                 android:layout_height="23dp"
                 android:layout_marginBottom="8dp"
                 android:text="徵伴類型"
+                android:textColor="@color/gray"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/gray"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/type2"
@@ -214,15 +213,17 @@
 
         </LinearLayout>
 
-        <TextView
-            android:layout_marginTop="16dp"
+        <Button
+            android:id="@+id/Schedule1"
             android:layout_width="100dp"
             android:layout_height="32dp"
-            android:text="行程表1"
-            android:padding="5dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/post_schedule_style"
             android:gravity="center"
-            android:textColor="@color/colorPrimaryDark"
-            android:background="@drawable/post_schedule_style"/>
+            android:onClick="ToSchedule"
+            android:padding="5dp"
+            android:text="行程表1"
+            android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
 
