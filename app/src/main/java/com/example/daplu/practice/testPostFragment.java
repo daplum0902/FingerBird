@@ -3,9 +3,6 @@ package com.example.daplu.practice;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +34,16 @@ public class testPostFragment extends Fragment {
             {"我想去看瀑布", "美國 / 尼加拉瓜", "12/10"}
     };
 
+//    int[] post_img = new int[]{
+//        R.drawable.demo_post_pic1, R.drawable.demo_post_pic2, R.drawable.demo_post_pic3, R.drawable.demo_post_pic4, R.drawable.demo_post_pic5
+//    };
+
+    int[][] post_img = new int[][]{
+            {R.drawable.demo_post_pic1, R.drawable.demo_user_g}, {R.drawable.demo_post_pic2, R.drawable.demo_user_b},
+            {R.drawable.demo_post_pic3, R.drawable.demo_user_b}, {R.drawable.demo_post_pic4, R.drawable.demo_user_g},
+            {R.drawable.demo_post_pic5, R.drawable.demo_user_g},
+    };
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -45,25 +52,36 @@ public class testPostFragment extends Fragment {
 
         //將資料轉換成<key,value>的型態
         List<Map<String, Object>> items = new ArrayList<Map<String,Object>>();
-        for (int i=0;i < data.length;i++){
+        for (int i=0;i < 5;i++){
             Map<String, Object> item = new HashMap<String, Object>();
             item.put("title", data[i][0]);
             item.put("place", data[i][1]);
             item.put("date", data[i][2]);
+            item.put("goDetail", Integer.toString(post_img[i][0]));
+            item.put("profile", Integer.toString(post_img[i][1]));
             items.add(item);
         }
 
-        //帶入對應資料
-        SimpleAdapter adapter = new SimpleAdapter(
-                getActivity(),
-                items,
-                R.layout.test_post_list_style,
-                new String[]{"title", "place", "date"},
-                new int[]{R.id.title, R.id.place, R.id.date}
+        // Keys used in Hashmap
+        String[] from = {"title", "place", "date", "goDetail", "profile" };
+
+        // Ids of views in listview_layout
+        int[] to = { R.id.title, R.id.place, R.id.date, R.id.goDetail, R.id.profile};
 
 
-        );
+        SimpleAdapter adapter = new SimpleAdapter(getActivity(), items, R.layout.test_post_list_style, from, to);
 
+//        //帶入對應資料
+//        SimpleAdapter adapter = new SimpleAdapter(
+//                getActivity(),
+//                items,
+//                R.layout.test_post_list_style,
+//                new String[]{"title", "place", "date"},
+//                new int[]{R.id.title, R.id.place, R.id.date}
+//
+//
+//        );
+//
         ListView listView = (ListView) view.findViewById(R.id.post2_list);
         listView.setAdapter(adapter);
 

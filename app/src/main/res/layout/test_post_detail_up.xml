@@ -45,8 +45,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/circleImageView"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_marginLeft="16dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/test_cover" />
@@ -55,10 +55,11 @@
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="18dp"
                 android:gravity="center_vertical"
                 android:text="印度阿三"
-                android:textSize="20sp"
+                android:textSize="18sp"
+                android:textColor="@color/gray"
                 android:textStyle="bold" />
 
             <TextView
@@ -68,7 +69,8 @@
                 android:layout_gravity="right|center"
                 android:layout_marginLeft="20dp"
                 android:text="10/10"
-                android:textSize="21sp" />
+                android:textColor="@color/gray"
+                android:textSize="19sp" />
 
 
         </LinearLayout>
@@ -93,8 +95,9 @@
                     android:layout_width="43dp"
                     android:layout_height="23dp"
                     android:text="地點"
-                    android:textSize="19sp"
-                    android:textStyle="bold" />
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray"/>
 
                 <TextView
                     android:id="@+id/plaz_info"
@@ -102,7 +105,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:text="美國 / 尼加拉瓜大瀑布"
-                    android:textSize="19sp" />
+                    android:textSize="17sp" />
             </LinearLayout>
 
 
@@ -118,8 +121,9 @@
                     android:layout_width="43dp"
                     android:layout_height="23dp"
                     android:text="預算"
-                    android:textSize="19sp"
-                    android:textStyle="bold" />
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray"/>
 
                 <ImageView
                     android:layout_width="23dp"
@@ -134,7 +138,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1500"
-                    android:textSize="19sp"
+                    android:textSize="17sp"
                     />
 
 
@@ -168,7 +172,8 @@
                 android:layout_height="23dp"
                 android:layout_marginBottom="8dp"
                 android:text="旅遊類型"
-                android:textSize="19sp"
+                android:textSize="18sp"
+                android:textColor="@color/gray"
                 android:textStyle="bold" />
 
             <TextView
@@ -177,7 +182,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:text="大眾交通"
-                android:textSize="19sp" />
+                android:textSize="17sp" />
 
 
         </LinearLayout>
@@ -194,8 +199,9 @@
                 android:layout_height="23dp"
                 android:layout_marginBottom="8dp"
                 android:text="徵伴類型"
-                android:textSize="19sp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/gray"/>
 
             <TextView
                 android:id="@+id/type2"
@@ -203,7 +209,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:text="友善"
-                android:textSize="19sp" />
+                android:textSize="17sp" />
 
 
         </LinearLayout>

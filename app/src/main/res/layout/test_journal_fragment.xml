@@ -50,6 +50,7 @@
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:cacheColorHint="@color/transparent"
-        android:listSelector="@color/transparent"/>
+        android:listSelector="@color/transparent"
+        android:layout_marginBottom="8dp"/>
 
 </RelativeLayout>

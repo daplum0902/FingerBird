@@ -33,11 +33,18 @@ public class testJournalFragment extends Fragment {
             {"阿天", "一起去天兵公園","世界 / 天兵"}
     };
 
+    int[][] journal_img = new int[][]{
+            {R.drawable.demo_post_pic8, R.drawable.demo_user_g}, {R.drawable.demo_post_pic7, R.drawable.demo_user_b},
+            {R.drawable.demo_post_pic6, R.drawable.demo_user_b}, {R.drawable.demo_post_pic4, R.drawable.demo_user_g},
+            {R.drawable.demo_post_pic5, R.drawable.demo_user_g},
+    };
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = View.inflate(getActivity(), R.layout.test_journal_fragment, null);
+        ListView listView = (ListView) view.findViewById(R.id.post_j_list);
 
         //將資料轉換成<key,value>的型態
         List<Map<String, Object>> items = new ArrayList<Map<String,Object>>();
@@ -46,19 +53,18 @@ public class testJournalFragment extends Fragment {
             item.put("poster_name", data[i][0]);
             item.put("journal_title", data[i][1]);
             item.put("journal_place", data[i][2]);
+            item.put("post_cover", Integer.toString(journal_img[i][0]));
+            item.put("profile", Integer.toString(journal_img[i][1]));
             items.add(item);
         }
 
-        //帶入對應資料
-        SimpleAdapter adapter = new SimpleAdapter(
-                getActivity(),
-                items,
-                R.layout.test_journal_list_style,
-                new String[]{"poster_name", "journal_title","journal_place"},
-                new int[]{R.id.poster_name, R.id.journal_title, R.id.journal_place}
-        );
+        // Keys used in Hashmap
+        String[] from = {"title", "place", "date", "post_cover", "profile" };
 
-        ListView listView = (ListView) view.findViewById(R.id.post_j_list);
+        // Ids of views in listview_layout
+        int[] to = { R.id.title, R.id.place, R.id.date, R.id.post_cover, R.id.profile};
+
+        SimpleAdapter adapter = new SimpleAdapter(getActivity(), items, R.layout.test_journal_list_style, from, to);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

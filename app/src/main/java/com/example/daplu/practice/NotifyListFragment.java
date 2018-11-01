@@ -55,7 +55,9 @@ public class NotifyListFragment extends Fragment {
     private ListAdapter listAdapter;
 
     public String[] data = {"恭喜您加入一個新聊天室 !", "您的徵伴申請已通過", "請繼續編輯個人資料，以便您的夥伴更容易認識您"};
-
+    int[] img = new int[]{
+            R.drawable.notify_chatting, R.drawable.notify_success, R.drawable.notify_settings
+    };
 
 
     @Override
@@ -64,22 +66,23 @@ public class NotifyListFragment extends Fragment {
 
         View view = View.inflate(getActivity(), R.layout.notify, null);
 
+        // Keys used in Hashmap
+        String[] from = {"notify_icon", "notify_top" };
+
+        // Ids of views in listview_layout
+        int[] to = { R.id.notify_icon, R.id.notify_top};
+
         //將資料轉換成<key,value>的型態
         List<Map<String, Object>> items = new ArrayList<Map<String,Object>>();
-        for (int i=0;i < data.length;i++){
+        for (int i=0;i < 3;i++){
             Map<String, Object> item = new HashMap<String, Object>();
             item.put("notify_top", data[i]);
+            item.put("notify_icon", Integer.toString(img[i]) );
             items.add(item);
         }
 
-        //帶入對應資料
-        SimpleAdapter adapter = new SimpleAdapter(
-                getActivity(),
-                items,
-                R.layout.notify_list_layout,
-                new String[]{"notify_top"},
-                new int[]{R.id.notify_top}
-        );
+        SimpleAdapter adapter = new SimpleAdapter(getActivity(), items, R.layout.notify_list_layout, from, to);
+
 
         ListView listView = (ListView) view.findViewById(R.id.notify_listView);
         listView.setAdapter(adapter);

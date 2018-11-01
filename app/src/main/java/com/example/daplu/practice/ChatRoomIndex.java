@@ -54,9 +54,13 @@ public class ChatRoomIndex extends Fragment {
 
         public String[][] data = {
                 {"標題", "4/4"},
-                {"時間", "4/5 ~ 4/6"},
-                {"時間", "4/5 ~ 4/6"},{"時間", "4/5 ~ 4/6"},{"時間", "4/5 ~ 4/6"},{"時間", "4/5 ~ 4/6"},{"時間", "4/5 ~ 4/6"}
+                {"標題", "4/5 ~ 4/6"},
+                {"標題", "4/5 ~ 4/6"},{"標題", "4/5 ~ 4/6"},{"標題", "4/5 ~ 4/6"}
         };
+
+    int[] post_img = new int[]{
+            R.drawable.demo_post_pic1, R.drawable.demo_post_pic2, R.drawable.demo_post_pic3, R.drawable.demo_post_pic4, R.drawable.demo_post_pic5
+    };
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -70,17 +74,18 @@ public class ChatRoomIndex extends Fragment {
                 Map<String, Object> item = new HashMap<String, Object>();
                 item.put("title", data[i][0]);
                 item.put("date", data[i][1]);
+                item.put("profile_photo", Integer.toString(post_img[i]));
                 items.add(item);
             }
 
+            // Keys used in Hashmap
+            String[] from = {"title", "date", "profile_photo" };
+
+            // Ids of views in listview_layout
+            int[] to = { R.id.title, R.id.date, R.id.profile_photo};
+
+            SimpleAdapter adapter = new SimpleAdapter(getActivity(), items, R.layout.chatroom_index_style, from, to);
             //帶入對應資料
-            SimpleAdapter adapter = new SimpleAdapter(
-                    getActivity(),
-                    items,
-                    R.layout.chatroom_index_style,
-                    new String[]{"title", "date"},
-                    new int[]{R.id.title, R.id.date}
-            );
             ListView listView = (ListView) view.findViewById(R.id.chatroom_list);
             listView.setAdapter(adapter);
             return view;
