@@ -184,7 +184,7 @@
     android:layout_height="wrap_content"
     android:name="com.example.daplu.practice.testJournalMsgList"
     android:id="@+id/msg_fragment"
-    android:layout_below="@+id/schedule_title"
+    android:layout_below="@+id/Toschedule1"
     android:layout_alignParentBottom="true"/>
 
 

@@ -4,11 +4,11 @@
 
     <item
         android:id="@+id/Post"
-        android:icon="@drawable/birdhouse"
+        android:icon="@drawable/quill"
         android:title="@string/nav_post" />
     <item
         android:id="@+id/home"
-        android:icon="@drawable/quill"
+        android:icon="@drawable/birdhouse"
         android:title="@string/nav_phome" />
 
 
