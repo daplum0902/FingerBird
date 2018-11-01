@@ -15,18 +15,18 @@ import android.widget.TextView;
 public class testPostDetailUpFragment extends Fragment {
     private TextView name;
     private Button ToSchedule;
-    private SharedPreferences prf;
+//    private SharedPreferences prf;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.test_post_detail_up, container, false);
-        name = view.findViewById(R.id.name);
-        prf = getActivity().getSharedPreferences("user_details",Context.MODE_PRIVATE);
-        if(prf.getString("name",null)!=null) {
-            name.setText(prf.getString("name", null));
-        }else{
-            name.setText(prf.getString("email", null));
-        }
+//        name = view.findViewById(R.id.name);
+//        prf = getActivity().getSharedPreferences("user_details",Context.MODE_PRIVATE);
+//        if(prf.getString("name",null)!=null) {
+//            name.setText(prf.getString("name", null));
+//        }else{
+//            name.setText(prf.getString("email", null));
+//        }
 
         ToSchedule = view.findViewById(R.id.Schedule1);
         ToSchedule.setOnClickListener(new View.OnClickListener() {
