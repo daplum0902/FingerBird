@@ -166,8 +166,8 @@
         </LinearLayout>
     </ScrollView>
 
-    <TextView
-        android:id="@+id/schedule_title"
+    <Button
+        android:id="@+id/Toschedule1"
         android:layout_width="100dp"
         android:layout_height="32dp"
         android:layout_below="@+id/post_content"

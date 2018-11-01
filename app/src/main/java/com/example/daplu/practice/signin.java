@@ -78,7 +78,7 @@ public class signin extends Activity {
             Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
         }
     }
-    public void Onsignup(View view) {
+    public void Backsignup(View view) {
         startActivity(new Intent(signin.this,signup.class));
     }
 }

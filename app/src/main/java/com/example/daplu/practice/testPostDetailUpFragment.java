@@ -34,8 +34,6 @@ public class testPostDetailUpFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),schedulelist.class);
                 startActivity(intent);
-
-
             }
         });
 
