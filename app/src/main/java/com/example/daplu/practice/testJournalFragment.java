@@ -61,10 +61,10 @@ public class testJournalFragment extends Fragment {
         }
 
         // Keys used in Hashmap
-        String[] from = {"title", "place", "date", "post_cover", "profile" };
+        String[] from = {"poster_name", "journal_title", "journal_place", "post_cover", "profile" };
 
         // Ids of views in listview_layout
-        int[] to = { R.id.title, R.id.place, R.id.date, R.id.post_cover, R.id.profile};
+        int[] to = { R.id.poster_name, R.id.journal_title, R.id.journal_place, R.id.post_cover, R.id.profile};
 
         SimpleAdapter adapter = new SimpleAdapter(getActivity(), items, R.layout.test_journal_list_style, from, to);
         listView.setAdapter(adapter);

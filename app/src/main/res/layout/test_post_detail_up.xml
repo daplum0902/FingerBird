@@ -20,7 +20,7 @@
 
 
     </FrameLayout>
-    <ImageView
+    <ImageButton
         android:id="@+id/profile"
         android:layout_width="110dp"
         android:layout_height="60dp"
@@ -30,6 +30,13 @@
         android:background="@drawable/icon_add"
         android:foregroundGravity="left"
         android:scaleType="fitCenter" />
+    <Button
+        android:id="@+id/travelend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="300dp"
+        android:text="" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -223,6 +230,7 @@
             android:padding="5dp"
             android:text="行程表1"
             android:textColor="@color/colorPrimaryDark" />
+
 
         </LinearLayout>
 
