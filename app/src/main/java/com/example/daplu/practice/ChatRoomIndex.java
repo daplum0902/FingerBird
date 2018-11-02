@@ -53,9 +53,10 @@ public class ChatRoomIndex extends Fragment {
         private ListAdapter listAdapter;
 
         public String[][] data = {
-                {"標題", "4/4"},
-                {"標題", "4/5 ~ 4/6"},
-                {"標題", "4/5 ~ 4/6"},{"標題", "4/5 ~ 4/6"},{"標題", "4/5 ~ 4/6"}
+                {"法國高空體驗之旅la ", "11/04"},
+                {"熱情高雄一起熱", "11/03"},
+                {"冰島-極光之旅", "11/02"},
+                {"支那之性之旅", "10/30"}
         };
 
     int[] post_img = new int[]{

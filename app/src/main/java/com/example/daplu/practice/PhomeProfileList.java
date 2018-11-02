@@ -26,9 +26,9 @@ public class PhomeProfileList extends Fragment {
     private ListAdapter listAdapter;
 
     public String[][] data = {
-            {"居住地", "農場"},
-            {"科系", "奇異果"},
-            {"星座", "奇毛座"}, {"星座", "奇毛座"},  {"星座", "奇毛座"} , {"星座", "奇毛座"}
+            {"居住地", "高雄市"},
+            {"星座", "獅子座"},
+            {"性別", "男"}, {"生日", "1997/08/16"},  {"興趣", "旅行、看書、攝影"} , {"自我介紹", "我想一根手指，遨遊全世界"}
     };
 
     @Override

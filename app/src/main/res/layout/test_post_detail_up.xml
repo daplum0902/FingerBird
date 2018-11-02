@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|center"
                 android:layout_marginLeft="20dp"
-                android:text="10/10"
+                android:text="11/4"
                 android:textColor="@color/gray"
                 android:textSize="19sp" />
 
@@ -111,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="美國 / 尼加拉瓜大瀑布"
+                    android:text="法國/艾菲爾鐵塔"
                     android:textSize="17sp" />
             </LinearLayout>
 
@@ -144,7 +144,7 @@
                     android:id="@+id/budget_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1500"
+                    android:text="81000"
                     android:textSize="17sp" />
 
 
@@ -163,7 +163,8 @@
                 android:paddingTop="15dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="15dp"
-                android:text="我們一起去看瀑布吧"
+                android:text="不介意搭uber、可以跟我去行程表裡目前規劃的行程、玩5天、希望以後可以繼續做朋友
+"
                 android:textSize="15sp" />
 
         <LinearLayout
@@ -174,7 +175,7 @@
 
             <TextView
                 android:id="@+id/type_title"
-                android:layout_width="43dp"
+                android:layout_width="80dp"
                 android:layout_height="23dp"
                 android:layout_marginBottom="8dp"
                 android:text="旅遊類型"
@@ -182,13 +183,17 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/type"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="25dp"
                 android:layout_marginLeft="20dp"
-                android:text="大眾交通"
-                android:textSize="17sp" />
+                android:background="@drawable/label_type_backpacker"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/label_type_nature"/>
 
 
         </LinearLayout>
@@ -201,7 +206,7 @@
 
             <TextView
                 android:id="@+id/type2_title"
-                android:layout_width="43dp"
+                android:layout_width="80dp"
                 android:layout_height="23dp"
                 android:layout_marginBottom="8dp"
                 android:text="徵伴類型"
@@ -209,13 +214,19 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/type2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="25dp"
                 android:layout_marginLeft="20dp"
-                android:text="友善"
-                android:textSize="17sp" />
+                android:background="@drawable/label_traveler_goodphoto"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/label_traveler_smallappetite"/>
+
+
 
 
         </LinearLayout>

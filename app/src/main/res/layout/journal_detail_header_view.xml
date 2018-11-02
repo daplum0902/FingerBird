@@ -30,7 +30,7 @@
             android:layout_toEndOf="@+id/profile"
             android:layout_toRightOf="@+id/profile"
             android:layout_marginLeft="16dp"
-            android:text="毛毛"
+            android:text="肥龍"
             android:textSize="17sp"
             android:layout_marginStart="16dp" />
 
@@ -98,7 +98,7 @@
         android:id="@+id/journal_place"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="台灣 / 屏東"
+        android:text="台灣/台北"
         android:textColor="@color/gray"
         android:textSize="17sp"
         android:layout_centerVertical="true"
@@ -130,8 +130,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/test_txt" />
+            android:text="台灣有直飛戴高樂機場需14hr,但是機票難搶，所以你們若要規劃巴黎旅遊的話，需要提前規劃，機票難求
 
+        這次住的住宿爲Booking.com 的五星推薦，但需要口袋身才能住，因為真的太貴啦，但是值得，可以看到巴黎的夜晚真的很值得，與台北的夜晚是不一樣的，且有附早餐，非常道地人口味，推推
+
+        再來就是推巴黎鐵塔晚餐，也是需要口袋身的人才能去吃，但是若有機會拜託去吃，氣氛佳，且他們的法國紅酒超讚，沒喝過那麼甘醇的紅酒，另外他們的牛排建議吃三分熟，超讚，再搭配紅酒潤喉，此身無遺憾XD
+
+        還有春天百貨，帶有濃濃的法國風，雖然說小弟買不起裡的精品，但是也很值得等推薦大家去逛逛。
+
+        最後，若不熟悉法國的大眾運輸，推薦搭uber雖然說跟公車比貴了點，但是快速方便，且有不定期的優惠可以使用
+
+        若你們大家有機會的話，巴黎真的是不錯自助旅行的城市啦，唯一小心小偷，他們真的蠻會偷的啦，要注意一下呦！"/>
 
     </LinearLayout>
     </ScrollView>

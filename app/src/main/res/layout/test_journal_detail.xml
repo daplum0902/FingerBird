@@ -30,7 +30,7 @@
             android:layout_weight="0.7"
             android:gravity="center"
             android:paddingBottom="8dp"
-            android:text="原住民的日常"
+            android:text="法國趴趴遊"
             android:textColor="@color/gray"
             android:textSize="18sp" />
 

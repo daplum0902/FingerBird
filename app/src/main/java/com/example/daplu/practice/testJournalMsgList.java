@@ -23,10 +23,10 @@ public class testJournalMsgList extends Fragment {
     private ListAdapter listAdapter;
 
     public String[][] data = {
-            {"阿五", "我可以帶貓過去嗎"},
-            {"阿加", "你喜歡羊駝嗎"},
-            {"阿加", "你喜歡羊駝嗎"},
-            {"阿加", "你喜歡羊駝嗎"}
+            {"阿鳥", "請問你在巴黎鐵塔晚餐吃多少錢呀?"},
+            {"紘紘", "請問你在市區裡搭uber方便嗎?"},
+            {"阿猴", "這真的很棒耶，我之前就跟我女友晚餐在巴黎鐵塔吃，氣氛推推"},
+            {"樹懶", "在original food tours有找到什麼推薦小吃嗎?我之前去太早了，沒遇到ㄏㄏ"}
     };
 
     int[] journal_img = new int[]{

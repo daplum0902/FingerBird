@@ -58,9 +58,9 @@ public class ScheduleIndexList extends Fragment {
     private ListAdapter listAdapter;
 
     public String[][] data = {
-            {"台南一日遊", "11/11"},
-            {"台南二日遊", "11/25"},
-            {"台南三日遊", "11/28"}
+            {"法國彈跳5天遊 ", "11/04"},
+            {"打狗高雄", "11/07"},
+            {"一定要見到極光la", "11/06"}
     };
 
     @Override

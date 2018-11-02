@@ -22,10 +22,10 @@ public class testPostDetailBottomFragment extends Fragment {
     private ListAdapter listAdapter;
 
     public String[][] data = {
-            {"阿五", "我可以帶貓過去嗎"},
-            {"阿加", "你喜歡羊駝嗎"},
-            {"阿加", "你喜歡羊駝嗎"},
-            {"阿加", "你喜歡羊駝嗎"}
+            {"天天", "請問只會講英文，法文不流利可以嗎?"},
+            {"惇惇", "請問我會開車，我可以當司機，這樣會比較方便，不知道你有一定要搭uber嗎?"},
+            {"長長", "請問你寫的價錢有包含來回機票嗎?"},
+            {"俊俊", "拜託選我，我都符合!!"}
     };
 
     int[] journal_img = new int[]{
